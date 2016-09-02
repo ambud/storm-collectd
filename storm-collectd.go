@@ -115,9 +115,11 @@ func getTopInfo(endpoint string) {
 		hostname, _ = os.Hostname()
 	}
 
+	endpoint = s.Replace(endpoint, "-", "_", -1)
+
 	for bolt := range info {
 		for k, v := range info[bolt] {
-			fmt.Printf("PUTVAL %s/storm/gauge-%s-%s N:%s\n", hostname, bolt, k, v)
+			fmt.Printf("PUTVAL %s/storm/gauge-%s-%s N:%s\n", hostname, endpoint+"_"+bolt, k, v)
 		}
 	}
 }
