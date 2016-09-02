@@ -34,7 +34,7 @@ import (
 
 var (
 	stormServer = "localhost"
-	stormPort   = "8080"
+	stormPort   = "8744"
 	stormApi    = "/api/v1"
 )
 
