@@ -21,6 +21,8 @@
 // THE SOFTWARE.
 package main
 
+import s "strings"
+
 import (
 	"encoding/json"
 	"fmt"
